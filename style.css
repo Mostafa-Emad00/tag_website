@@ -1,0 +1,644 @@
+/* ==================== CSS Reset ==================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #1C1C1C; /* اللون الأساسي الداكن */
+    /* --secondary-color: #00CCFF; لون ثانوي */
+    --background-overlay: rgba(0, 0, 0, 0.5); /* تراكب خلفية شفاف */
+    --text-light: #000000; /* لون النص الفاتح */
+    --text-dark: #000; /* لون النص الداكن */
+}
+
+/* ==================== General Styles ==================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #333; /* الخلفية الأساسية للموقع */
+    color: var(--text-light); /* اللون الافتراضي للنص */
+    line-height: 1.6;
+    overflow-x: hidden; /* لإزالة التمرير الأفقي */
+}
+
+/* ==================== Background Moving Effect ==================== */
+.moving-background {
+    animation: movingBackground 10s linear infinite;
+}
+
+@keyframes movingBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* ==================== Header Section ==================== */
+
+/* تحسين تأثيرات الانتقال للخلفية */
+.home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.552), rgba(0, 0, 0, 0.119)), url(../images/Capture3.JPG);
+    background-size: cover;
+    background-position: center;
+    height: 105vh;
+    opacity: 0;
+    animation: fadeInBackground 3s ease-in-out forwards;
+}
+
+/* تأثير تلاشي أقوى للخلفية */
+@keyframes fadeInBackground {
+    0% { opacity: 0; transform: scale(1.05); } /* البداية بحجم أكبر قليلاً */
+    100% { opacity: 1; transform: scale(1); } /* تلاشي تدريجي مع الحجم الطبيعي */
+}
+
+/* تحسين الكتابة المتحركة */
+.typing-animation {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+
+/* تحسينات ثلاثية الأبعاد للأزرار */
+.btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.35rem;
+    border-radius: 50px;
+    transition: background-color 0.4s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease; /* تحويل بتسارع مخصص */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    perspective: 1000px; /* لتحسين التأثير ثلاثي الأبعاد */
+}
+
+.btn:hover {
+    background-color: #004A8C;
+    transform: rotateY(15deg) translateY(-5px) scale(1.1); /* دوران ثلاثي الأبعاد مع تكبير */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    background-color: hsl(0, 100%, 50%);
+    transform: rotateY(0deg) translateY(2px) scale(0.98); /* تقليل التأثير عند الضغط */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* تحسينات ثلاثية الأبعاد للأيقونات */
+.head-icon a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.481);
+    box-sizing: border-box;
+    padding: 5px;
+    transition: background-color 0.4s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    perspective: 800px; /* لإعطاء تأثير ثلاثي الأبعاد */
+}
+
+.head-icon a:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: rotateX(15deg) scale(1.2); /* دوران حول المحور X مع تكبير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+
+
+/* .navbar styles (commented out) */
+/*
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(214, 202, 202, 0.9);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-light);
+    font-weight: 500;
+    letter-spacing: 1.8;
+    transition: color 0.5s, background-color 0.5s;
+    margin-right: 5px;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.dropdown-menu {
+    background: #dbdbdb;
+    border: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+*/
+
+/* ==================== Navbar Styles ==================== */
+/* General Styles for Dropdown Menu */
+.services-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.services-dropdown .nav-link {
+    color: #ffffff !important;
+}
+
+.services-dropdown .dropdown-menu {
+    background-color: #454545 !important; /* Gray background for dropdown menu */
+    border: none; /* Remove default border */
+}
+
+.services-dropdown .dropdown-item {
+    color: #ffffff !important; /* White text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.services-dropdown .dropdown-item:hover {
+    background-color: #cccccc !important; /* Gray background on hover */
+    color: #ffffff !important; /* Ensure text color remains white on hover */
+}
+
+
+
+
+
+
+.navbar-nav .nav-link.active {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-nav li a {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1.8;
+    transition: 0.5s all;
+    margin-right: 5px;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.dropdown-menu .dropdown-item {
+    color: black;
+    font-weight: 500;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: var(--secondary-color);
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: -1px;
+}
+
+.dropdown-submenu.show .dropdown-menu {
+    display: block;
+}
+
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #454545 !important;
+    color: #ffffff !important;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #b6b5b3 !important;
+    color: #ffffff !important;
+}
+
+/* ==================== About Section ==================== */
+#about {
+    background: url(../images/parallax/mission8.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 60px 0;
+    color: #FFF;
+}
+
+.about-tx .col-md-4 img {
+    border: 2px solid #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-tx h2 {
+    color: #FFF;
+}
+
+.about-tx p {
+    color: #FFF;
+}
+
+.button-about .btn2 button {
+    background-color: #FFF;
+    color: #000;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-about .btn2 button:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
+/* ==================== Services Section ==================== */
+.service-box a {
+    display: block;
+}
+
+.service-box img {
+    transition: transform 0.3s ease;
+}
+
+.service-box a:hover img {
+    transform: scale(1.05);
+}
+
+.services-box > p {
+    max-width: 300px;
+}
+
+.ser-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ser-icon i {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(210, 200, 200, 0.61);
+    border: 1px solid rgba(210, 200, 200, 0.61);
+    border-radius: 50%;
+    padding-top: 10px;
+    transition: all 1s;
+}
+
+.ser-icon:hover i {
+    background-color: black;
+    color: #F7F7F7;
+}
+
+.services-box {
+    background-color: rgb(149, 64, 64);
+    box-shadow: 1px 1px 1px rgb(217, 229, 229);
+}
+
+/* ==================== Footer Section ==================== */
+.footer {
+    background: #000;
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: var(--text-light);
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* ==================== Dynamic Text Color ==================== */
+.dark-bg {
+    color: var(--text-light);
+}
+
+.light-bg {
+    color: var(--text-dark);
+}
+
+/* ==================== Partner Frame ==================== */
+.partner-frame {
+    width: 130%;
+    max-width: 230px;
+    height: 150px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-frame:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#partners {
+    background: url(../images/parallax/grunge-gray-concrete-textured-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 60px 0;
+    color: #FFF;
+}
+
+.partner-frame {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* ==================== Get a Quote Section ==================== */
+
+/* get quote */
+
+ /* Ensure proper styling for the modal */
+ .modal-dialog {
+    max-width: 500px; /* Adjust as needed */
+}
+
+.modal-content {
+    border-radius: 8px; /* Rounded corners */
+}
+
+.modal-header {
+    border-bottom: none; /* Remove border */
+}
+
+.modal-footer {
+    border-top: none; /* Remove border */
+}
+
+.close {
+    font-size: 1.5rem; /* Larger close button */
+    line-height: 1;
+}
+
+.close span {
+    display: block; /* Ensure the close icon is visible */
+    color: #000; /* Color of the close icon */
+}
+
+/* Styling for the 'GET A QUOTE' Section */
+#get-quote {
+    padding: 70px 0;
+    background-color: #f8f9fa;
+}
+
+/* Flexbox to ensure equal height for image and form columns */
+#get-quote .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styling for the image column */
+.get-quote-image, 
+.get-quote-form {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Styling for the image inside the image column */
+.image-column img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Styling for the form container with increased height */
+.form-container {
+    width: 100%;
+    max-width: 130%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px; /* Increased padding to make form taller */
+    min-height: 500px; /* Set a minimum height for the form container */
+}
+
+/* Heading for the form section */
+.form-container h2 {
+    color: #333;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Text description under the heading */
+.form-container p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Button hover effect */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Alert message styling */
+#response-message {
+    display: none;
+    margin-top: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* General Flexbox alignment */
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+/* General utility class for 100% width */
+.w-100 {
+    width: 100%;
+}
+
+/* Styling for column padding */
+.col-lg-6 {
+    padding: 15px;
+}
+
+
+
+
+------------
+Styling for the section
+#get-quote {
+    padding: 60px 0;
+}
+
+.form-container {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Increased padding to make the form taller */
+    min-height: 600px; /* Set a minimum height for the form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container h2 {
+    color: #333;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-container p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Styling for form fields and spacing */
+.form-group {
+    margin-bottom: 20px; /* Space between form fields */
+}
+
+.form-control {
+    height: 45px; /* Increased height for input fields */
+    padding: 10px; /* Increased padding inside input fields */
+    font-size: 15px; /* Font size for input fields */
+}
+
+.image-column img {
+    border-radius: 8px;
+    width: 90%;
+    height: auto;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Ensure equal height for image and form columns */
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.col-lg-6 {
+    padding: 15px;
+}
+
+/* ==================== Specific Section Styles ==================== */
+.special-section {
+    color: #FF5733 !important; /* Example color that will override other styles */
+}
+
+/* خلفية قسم "اتصل بنا" */
+#contact {
+    background: url(../images/parallax/grunge-gray-concrete-textured-background.jpg) no-repeat center center fixed;
+    background-size: cover; /* لجعل الصورة تغطي الخلفية بالكامل */
+    padding: 60px 0; /* تعديل المسافات حول المحتوى في القسم */
+    color: #FFF; /* تغيير لون النص إلى الأبيض لضمان وضوحه على الخلفية */
+}
+
+
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* تراكب شفاف */
+    z-index: -1;
+}
+
+
+/* Styling for the contact section */
+#contact {
+    padding: 60px 0;
+}
+
+.contact-info {
+    padding-right: 15px;
+}
+
+.map {
+    border: 5px solid #daebfd; /* Border around the map */
+    border-radius: 12px; /* Rounded corners */
+    overflow: hidden; /* Ensure the border radius is applied to the iframe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow around the map */
+    width: 100%; /* Ensure the map container takes full width */
+    height: 350px; /* Adjust height as needed */
+    position: relative; /* Position relative to handle absolute child */
+}
+
+.map iframe {
+    border: none; /* Remove the default border from iframe */
+    width: 100%; /* Make iframe full width */
+    height: 100%; /* Make iframe full height */
+    position: absolute; /* Ensure it fills the map container */
+    top: 0;
+    left: 0;
+}

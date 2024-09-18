@@ -1,0 +1,612 @@
+* 
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* body {
+    font-family: 'Poppins', sans-serif;
+} */
+
+:root {
+    --primary-color: #1C1C1C;
+}
+
+/* body {
+    background-color: #4d4d4d; /*الخلفية الرئيسية للويب لون رمادي  */
+*/
+
+html {
+    scroll-padding-top: 57px;
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+.main-color {
+    color: var(--primary-color)hsl(0, 49%, 51%);
+}
+
+.btn-color {
+    background-color: var(--primary-color);
+}
+
+.text-paragraph {
+    max-width: 500px;
+    color: grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    font-weight: 900;
+}
+.section-header{
+    background-image: url(../images/dots.png);
+    width: fit-content;
+    margin: auto;
+}
+
+
+
+
+/* ==== NAVBAR ==> */
+
+.navbar-nav .nav-link.active {
+    color: #00CCFF;
+}
+
+.navbar-nav li a {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1.8;
+    transition: 0.5s all;
+    margin-right: 5px;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Style for dropdown menus */
+.dropdown-menu {
+    background: #343a40;
+    border: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: none; /* Initially hidden */
+}
+
+.dropdown-item {
+    color: #f8f9fa;
+}
+
+.dropdown-item:hover {
+    background-color: #495057;
+    color: #f8f9fa;
+}
+
+/* Show dropdown menu on hover */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Custom styles for nested dropdown menus */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    display: block; /* Show nested dropdown menu on hover */
+}
+
+.dropdown-menu .dropdown-menu {
+    margin-left: 0;
+    margin-top: 0;
+    background: #495057;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none; /* Initially hidden */
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background: #6c757d;
+}
+
+/* CSS لإخفاء القائمة المنسدلة لـ Courts بشكل افتراضي */
+.courts-menu {
+    display: none;
+}
+
+/* CSS لإظهار القائمة المنسدلة عند النقر على العنصر */
+.courts-link:focus + .courts-menu,
+.courts-link:hover + .courts-menu {
+    display: block;
+}
+
+/* تعديل كيفية عرض القوائم المنسدلة */
+.dropdown-menu {
+    position: relative;
+}
+
+/* جعل قائمة Courts غير مرئية عند التمرير فوقها */
+.dropdown-submenu:hover > .courts-menu {
+    display: none;
+}
+
+
+
+
+
+
+/* تحسين تأثيرات الانتقال للخلفية */
+.home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.552), rgba(0, 0, 0, 0.119)), url(../images/Capture3.JPG);
+    background-size: cover;
+    background-position: center;
+    height: 105vh;
+    opacity: 0;
+    animation: fadeInBackground 3s ease-in-out forwards;
+}
+
+/* تأثير تلاشي أقوى للخلفية */
+@keyframes fadeInBackground {
+    0% { opacity: 0; transform: scale(1.05); } /* البداية بحجم أكبر قليلاً */
+    100% { opacity: 1; transform: scale(1); } /* تلاشي تدريجي مع الحجم الطبيعي */
+}
+
+/* تحسين الكتابة المتحركة */
+.typing-animation {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgba(255, 255, 255, 0.85);
+    animation: typing 5s steps(40, end) infinite, blink-caret 1s step-end infinite;
+    margin-bottom: 20px;
+}
+
+/* تحسينات ثلاثية الأبعاد للأزرار */
+.btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.35rem;
+    border-radius: 50px;
+    transition: background-color 0.4s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease; /* تحويل بتسارع مخصص */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    perspective: 1000px; /* لتحسين التأثير ثلاثي الأبعاد */
+}
+
+.btn:hover {
+    background-color: #004A8C;
+    transform: rotateY(15deg) translateY(-5px) scale(1.1); /* دوران ثلاثي الأبعاد مع تكبير */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    background-color: hsl(0, 100%, 50%);
+    transform: rotateY(0deg) translateY(2px) scale(0.98); /* تقليل التأثير عند الضغط */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* تحسينات ثلاثية الأبعاد للأيقونات */
+.head-icon a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.481);
+    box-sizing: border-box;
+    padding: 5px;
+    transition: background-color 0.4s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+    perspective: 800px; /* لإعطاء تأثير ثلاثي الأبعاد */
+}
+
+.head-icon a:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: rotateX(15deg) scale(1.2); /* دوران حول المحور X مع تكبير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* ====> ABOUT SECTION STYLING <==== */
+
+/* ===== ABOUT ===> */
+
+
+.social-icons {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    margin-right: 10px;
+    transition: 0.5s all;
+}
+
+.social-icons:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+.web{
+    background-color:#dc2727;
+    margin: 5px 0;
+    /* width: ; */
+    border-radius: 5px;
+    margin: 15px;
+
+}
+.web .design{
+    background-color: black;
+    color: white;
+    width: 95%;
+    justify-content: space-between;
+    border-radius: 5px;
+    height: fit-content;
+}
+.web .branding{
+    width: 80%;
+    background-color: black;
+}
+.web .Development{
+    width: 90%;
+    background-color: black;
+
+
+}
+.button-about {
+    margin: auto;
+}
+.button-about  .btn1 button{
+    background-color:var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+    /* border: 3%; */
+    transition: 1s;
+}
+.button-about  .btn2 button{
+    background-color:transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border: 3%;
+    transition: 1s;
+}
+.button-about  .btn1:hover button{
+    background-color: transparent;
+    color: var(--primary-color);
+
+}
+.button-about  .btn2:hover button{
+    background-color: var(--primary-color);
+    color: white;
+
+}
+.about-tx{
+    margin:auto;
+}
+
+
+/* ===== SERVICES ===> */
+
+.service-box a {
+    display: block; /* يجعل الرابط يغطي كامل العنصر */
+}
+
+.service-box img {
+    transition: transform 0.3s ease;
+}
+
+.service-box a:hover img {
+    transform: scale(1.05); /* يضيف تأثير تكبير الصورة عند التمرير فوقها */
+}
+
+
+
+.services-box>p {
+    max-width: 300px;
+    /* height: 200px; */
+}
+.ser-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ser-icon i{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(210, 200, 200, 0.61);
+    border: 1px solid rgba(210, 200, 200, 0.61);
+    border-radius: 50%;
+    padding-top: 10px;
+    transition: all 1s;
+}
+.ser-icon:hover i{
+    background-color: black;
+    color: #F7F7F7;
+}
+  .services-box  {
+    background-color: rgb(149, 64, 64);
+    box-shadow:1px 1px 1px  rgb(217, 229, 229);
+}
+
+
+
+
+
+/* ===== CLIENT ====> */
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+.carousel-item img{
+    width: 100px ;
+}
+
+/* .carousel-indicators .active {
+    width: 40px;
+} */
+
+
+
+/* General styles for the section */
+#get-quote {
+    position: relative;
+    background-color: #f8f9fa; /* Light background color for contrast */
+    padding: 60px 0;
+}
+
+/* Style for the image column */
+.image-column {
+    text-align: center;
+}
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form styles */
+#quote-form .form-group {
+    margin-bottom: 20px;
+}
+
+#quote-form .form-control {
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+#quote-form .btn-primary {
+    background-color: #007bff; /* Primary color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#quote-form .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Heading and text styling */
+.form-heading h3 {
+    font-size: 24px;
+    color: #333; /* Dark text color for contrast */
+    margin-bottom: 20px;
+}
+
+.heading-section h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.heading-section p {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+
+/* OUR project */
+
+.projects {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff; /* White background for each project */
+}
+
+.project-image {
+    width: 100%;
+    height: 250px; /* Fixed height for images */
+    overflow: hidden;
+    border-bottom: 4px solid #007bff; /* Blue bottom border for visual interest */
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container */
+    transition: transform 0.3s ease;
+}
+
+.project-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-info h4 {
+    margin-bottom: 15px;
+    color: #007bff; /* Blue color for titles */
+}
+
+.project-info p {
+    margin-bottom: 20px;
+    color: #333; /* Dark gray for text */
+}
+
+.project-info a.btn {
+    background-color: #007bff; /* Blue button color */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.project-info a.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+/* OUR PARTNERS */
+
+.partner-frame {
+    width: 130%;
+    max-width: 230px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    overflow: hidden;
+    border: 2px solid #ddd; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-frame img {
+    width: 130%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers the container */
+}
+
+
+
+/* ==== Contact Section ===> */
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 .0625rem var(--primary-color);
+    }
+
+    #contact .btn:hover {
+        background-color: var(--primary-color);
+
+    }
+    .contact-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100px; */
+        /* height: 100px; */
+    }
+    .contact-icon i{
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        transition: .5s all;
+        padding-top: 9px;
+        
+    }
+    .contact-i:hover i{
+        background-color: #1C1C1C;
+        color: #F7F7F7;
+    }
+    .container .creat{
+        width: 80%;
+        /* text-align: center; */
+        margin: auto;
+    }
+    .submit button{
+        background-color: #1C1C1C;
+        color: white;
+        border-radius: 7%;
+
+    }
+    .submit:hover button{
+        background-color: #F7F7F7;
+        color: var(--primary-color);
+        border: 3px solid #1C1C1C;
+    }
+
+    .background-image-section {
+        background-image: url('images/background-image.jpg'); /* Replace with your image path */
+        background-size: cover; /* Adjust to cover the section */
+        background-position: center; /* Center the image */
+        padding: 50px 0; /* Adjust padding as needed */
+        color: #fff; /* Adjust text color if necessary */
+    }
+    
+
+
+
+
+
+
+
+/* Contact Section Styles */
+.contact {
+    padding: 60px 0;
+}
+
+.contact h4 {
+    font-size: 1.5rem;
+}
+
+.contact .form-control {
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+.footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #00CCFF;
+}
