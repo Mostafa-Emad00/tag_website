@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">TAG Group - Sports Construction</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- FONTAWESOME ICONS -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- CSS STYLESHEET -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+<!-- ====> NAVBAR <====-->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: linear-gradient(90deg, hsla(240, 1%, 36%, 0.582), rgba(34,34,34,0.8)); box-shadow: 0 4px 10px;">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#" style="color: #f8f9fa;">
+            <img src="images/logo.png" alt="Logo" style="width: 50px; margin-right: 14px;"> 
+            <span data-translate="navbar_brand">TAG Group</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="homeLink" aria-current="page" href="#home">
+                        <span class="home-text" data-translate="home">Home</span>
+                        <span class="underline"></span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="aboutLink" href="#about">
+                        <span class="about-text" data-translate="about">About us</span>
+                        <span class="underline"></span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="servicesLink" href="#services" role="button" aria-expanded="false">
+                        <span class="services-text" data-translate="services">Services</span>
+                        <span class="underline"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="servicesLink">
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle courts-link" href="#" data-translate="courts">Courts</a>
+                            <ul class="dropdown-menu courts-menu">
+                                <li><a class="dropdown-item" href="#football" data-translate="football">Football</a></li>
+                                <li><a class="dropdown-item" href="#basketball" data-translate="basketball">Basketball</a></li>
+                                <li><a class="dropdown-item" href="#hockey" data-translate="hockey">Hockey</a></li>
+                                <li><a class="dropdown-item" href="#padbol" data-translate="padbol">Padbol</a></li>
+                                <li><a class="dropdown-item" href="#volleyball" data-translate="volleyball">Volleyball</a></li>
+                                <li><a class="dropdown-item" href="#handball" data-translate="handball">Handball</a></li>
+                                <li><a class="dropdown-item" href="#tracks" data-translate="tracks">Tracks</a></li>
+                                <li><a class="dropdown-item" href="#tennis" data-translate="tennis">Tennis</a></li>
+                                <li><a class="dropdown-item" href="#squash" data-translate="squash">Squash</a></li>
+                                <li><a class="dropdown-item" href="#multiPurpose" data-translate="multiPurpose">MultiPurpose</a></li>
+                                <li><a class="dropdown-item" href="#padel" data-translate="padel">Padel</a></li>
+                                <li><a class="dropdown-item" href="#climbingWalls" data-translate="climbingWalls">Climbing walls</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#runningTracks" data-translate="runningTracks">Running tracks</a></li>
+                        <li><a class="dropdown-item" href="#playgroundFlooring" data-translate="playgroundFlooring">Playground Flooring</a></li>
+                        <li><a class="dropdown-item" href="#swimmingPools" data-translate="swimmingPools">Swimming pools</a></li>
+                        <li><a class="dropdown-item" href="#hardSoftScape" data-translate="hardSoftScape">Hard Scape & Soft Scape</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="partnersLink" href="#partners">
+                        <span class="partners-text" data-translate="partners">Our Partners</span>
+                        <span class="underline"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="getQuoteLink" href="#get-quote">
+                        <span class="get-quote-text" data-translate="getQuote">Get a Quote</span>
+                        <span class="underline"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="referenceListLink" href="files/TAG PROJECTS LIST.pdf" target="_blank">
+                        <span class="reference-list-text" data-translate="referenceList">Reference List</span>
+                        <span class="underline"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contactLink" href="#contact">
+                        <span class="contact-text" data-translate="contact">Contact Us</span>
+                        <span class="underline"></span>
+                    </a>
+                </li>
+                <div class="language-dropdown">
+                    <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-globe"></i> <span class="visually-hidden">Language</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#" data-lang="en"><i class="fas fa-flag-usa"></i> English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="ar"><i class="fas fa-flag"></i> Arabic</a></li>
+                        <!-- Add more languages as needed -->
+                    </ul>
+                </div>
+                <style>
+/* General Styles for Dropdown Menu */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.language-dropdown .nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.language-dropdown .dropdown-menu {
+    min-width: 150px;
+    background-color: #454545 !important; /* Gray background for dropdown menu */
+}
+
+.language-dropdown .dropdown-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px;
+    color: #ffffff !important; /* White text color */
+}
+
+.language-dropdown .dropdown-item i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.language-dropdown .dropdown-item:hover {
+    background-color: #e76210 !important; /* Background color on hover */
+    color: #e76210 !important; /* Ensure text color remains white on hover */
+}
+
+/* Add custom styles for the icon */
+.language-dropdown .nav-link i {
+    font-size: 20px; /* Adjust icon size as needed */
+    color: #ffffff;
+}
+
+.language-dropdown .dropdown-menu .dropdown-item {
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+                </style>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ====> HEADER <====-->
+<header id="home" class="home text-white d-flex flex-column justify-content-center align-items-center text-center">
+    <div class="container text-center">
+        <h5 class="fw-bold mb-2" data-translate="header_title">TAG Group</h5>
+        <h2 class="display-4 fw-semibold typing-animation mb-4" data-translate="header_subtitle">Innovating the Future of Sports Construction</h2>
+
+        <div class="head-icon mt-4">
+            <a href="https://www.facebook.com/Tagsportsg?mibextid=ZbWKwL" class="text-white fs-4 p-2" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/tag-sports-group/posts/?feedView=all" class="text-white fs-4 p-2" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/@TAGSportsGroup" class="text-white fs-4 p-2" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/tagsportsgroup/" class="text-white fs-4 p-2" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <!-- Upload Portfolio Button -->
+        <a href="files/Tag Profile_.pdf" class="btn btn-primary btn-lg rounded-pill" download data-translate="downloadPortfolio">Download Portfolio</a>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="about py-5 d-flex">
+    <div class="container py-4">
+        <div class="about-tx row">
+            <div class="col-md-4 align-items-center">
+                <!-- <img src="images/tag logo dark background-01-01.jpg" class="w-100 h-100 p-1 border border-1 rounded-1" alt=""> -->
+            </div>
+            <div class="col-md-6 align-items-center">
+                <h2 class="fw-bold" data-translate="about_title">About Us</h2>
+                <p class="text-muted fs-5 mb-4" data-translate="about_text">TAG Group was founded with a vision to deliver world-class sports construction services, backed by deep expertise and unique standards. We are committed to continuous development, ensuring that our policies and strategic plans not only enhance our offerings but also contribute positively to society. Our commitment to credibility, professionalism, and integrity has earned us the trust of our clients across the globe.</p>
+
+                <div class="button-about py-4">
+                    <a href="#contact" class="btn2 text-uppercase">
+                        <button class="py-2 px-4 rounded-1" data-translate="contact_us">Contact Us</button>
+                    </a>
+                    <!-- Read More Button -->
+                    <a href="about.html" class="btn2 text-uppercase">
+                        <button class="py-2 px-4 rounded-1" data-translate="read_more">Read More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====> SERVICES <====-->
+<section id="services" class="services bg-light py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 data-translate="services_title">Our Services</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service1.jpg" class="img-fluid rounded mb-3" alt="Service 1" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service1_title">Sports Court Acrylic Flooring</h5>
+                    <p data-translate="service1_desc">High-quality and durable acrylic flooring designed for various sports courts, providing excellent performance and longevity.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service2.jpg" class="img-fluid rounded mb-3" alt="Service 2" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service2_title">Running Track</h5>
+                    <p data-translate="service2_desc">Precision-engineered running tracks designed to offer optimal performance and safety for runners of all skill levels.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service3.jpg" class="img-fluid rounded mb-3" alt="Service 3" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service3_title">Hockey Fields</h5>
+                    <p data-translate="service3_desc">High-performance hockey fields designed to meet the demands of professional and amateur players alike, ensuring safety and playability.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <a href="http://localhost:8080/tag%20website/tennis/" class="d-block">
+                        <img src="images/WhatsApp Image 2024-08-30 at 15.28.22.jpeg" class="img-fluid rounded mb-3" alt="Service 4" style="height: 250px; object-fit: cover;">
+                    </a>
+                    <h5 data-translate="service4_title">Tennis Courts</h5>
+                    <p data-translate="service4_desc">Engineered for precision and endurance, our tennis courts are suitable for players of all levels, providing a top-quality playing surface.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service5.jpg" class="img-fluid rounded mb-3" alt="Service 5" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service5_title">Squash Courts</h5>
+                    <p data-translate="service5_desc">Designed to deliver superior performance and safety, our squash courts are built to enhance the playing experience for enthusiasts and professionals.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service6.jpeg" class="img-fluid rounded mb-3" alt="Service 6" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service6_title">Volleyball Courts</h5>
+                    <p data-translate="service6_desc">High-quality volleyball courts designed to offer excellent playability and safety, suitable for both recreational and competitive play.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service7.jpeg" class="img-fluid rounded mb-3" alt="Service 7" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service7_title">Basketball Courts</h5>
+                    <p data-translate="service7_desc">Durable and high-performance basketball courts engineered to meet the needs of players and teams, providing an optimal playing surface.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service8.jpg" class="img-fluid rounded mb-3" alt="Service 8" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service8_title">Playground Floorings</h5>
+                    <p data-translate="service8_desc">Safe and durable playground flooring options designed to enhance play areas, ensuring safety and comfort for children.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service9.jpg" class="img-fluid rounded mb-3" alt="Service 9" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service9_title">Hardscape & Softscape Construction</h5>
+                    <p data-translate="service9_desc">Creating aesthetically pleasing and functional outdoor spaces with a balance of durable hardscape structures and lush softscape elements.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service10.jpg" class="img-fluid rounded mb-3" alt="Service 10" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service10_title">Padel Courts</h5>
+                    <p data-translate="service10_desc">Designed for all skill levels, our padel courts offer a unique playing experience, combining elements of tennis and squash.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service11.jpg" class="img-fluid rounded mb-3" alt="Service 11" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service11_title">Football Courts</h5>
+                    <p data-translate="service11_desc">Professional-quality football courts designed to provide a top-tier playing experience, enhancing the game for players of all levels.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service12.jpg" class="img-fluid rounded mb-3" alt="Service 12" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service12_title">Multipurpose Courts</h5>
+                    <p data-translate="service12_desc">Versatile courts designed to accommodate various sports and activities, providing a flexible solution for diverse needs.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box p-3 border rounded text-center">
+                    <img src="images/service13.jpg" class="img-fluid rounded mb-3" alt="Service 13" style="height: 250px; object-fit: cover;">
+                    <h5 data-translate="service13_title">Fences Construction</h5>
+                    <p data-translate="service13_desc">Custom-built fences designed to provide security and enhance the aesthetic appeal of any property or space.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<!-- ====> OUR PARTNERS <====-->
+<section id="partners" class="partners py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 data-translate="partners_title">Our Partners</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="partner-frame">
+                    <img src="images/partner1.png" alt="Partner 1" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="partner-frame">
+                    <img src="images/partner2.png" alt="Partner 2" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="partner-frame">
+                    <img src="images/partner3.png" alt="Partner 3" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="partner-frame">
+                    <img src="images/partner4.png" alt="Partner 4" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- ====> GET A QUOTE <====-->
+<section id="get-quote" class="ftco-section bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate py-md-4 text-center">
+                <!-- Title and Description -->
+                <h2 class="mb-4 font-weight-bold" data-translate="quote_title">Request a Quote</h2>
+                <p class="text-muted mb-4" data-translate="quote_description">Fill out the form below to get a personalized quote for your project. Our team will get back to you shortly.</p>
+            </div>
+            <div class="col-lg-12 d-flex">
+                <!-- Image Column -->
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="image-column w-100">
+                        <img src="images/Capture.JPG" alt="Decorative Image" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Form Column -->
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="form-container p-4 bg-white shadow rounded w-100">
+                        <form id="quote-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name" data-translate="form_name_label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="" data-translate="form_name_placeholder" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email" data-translate="form_email_label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="" data-translate="form_email_placeholder" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-translate="form_phone_label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="" data-translate="form_phone_placeholder">
+                            </div>
+                            <div class="form-group">
+                                <label for="floor-type" data-translate="form_floor_type_label">Type of Flooring</label>
+                                <select id="floor-type" class="form-control" required>
+                                    <option value="" data-translate="form_select_placeholder">Select Flooring Type</option>
+                                    <option value="courts" data-translate="floor_courts">Courts</option>
+                                    <option value="pools" data-translate="floor_pools">Pools</option>
+                                    <option value="landscape" data-translate="floor_landscape">Landscape</option>
+                                    <option value="maintenance" data-translate="floor_maintenance">Maintenance</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="sub-category" data-translate="form_sub_category_label">Sub Category</label>
+                                <select id="sub-category" class="form-control" required>
+                                    <option value="" data-translate="form_select_placeholder">Select Sub Category</option>
+                                    <!-- Sub categories will be populated by JavaScript -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="area" data-translate="form_area_label">Area (in square meters)</label>
+                                <input type="number" class="form-control" id="area" placeholder="" data-translate="form_area_placeholder" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-translate="form_message_label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="" data-translate="form_message_placeholder" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-translate="quote_button">Request a Quote</button>
+                        </form>
+                        <!-- Confirmation Message -->
+                        <div id="confirmation-message" class="alert alert-success mt-3" style="display: none;">
+                            <p data-translate="confirmation_message">We will contact you soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- JavaScript for Handling Form Submission -->
+<script>
+document.getElementById('quote-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    document.getElementById('confirmation-message').style.display = 'block'; // Show confirmation message
+    this.reset(); // Reset the form fields
+});
+</script>
+
+
+
+
+<!-- ====> CONTACT <====-->
+<section id="contact" class="contact py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 data-translate="contact_title">Contact Us</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-info">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-location-dot fs-4 me-2"></i>
+                        <div>
+                            <h4 data-translate="contact_address_title">Address</h4>
+                            <p data-translate="contact_address">57 Shehab St., Mohandseen, Cairo, Egypt</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-phone fs-4 me-2"></i>
+                        <div>
+                            <h4 data-translate="contact_phone_title">Phone</h4>
+                            <p data-translate="contact_phone">(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-envelope fs-4 me-2"></i>
+                        <div>
+                            <h4 data-translate="contact_email_title">Email</h4>
+                            <p data-translate="contact_email">info@taggroup.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.3375363636874!2d31.201030221984137!3d30.055857853379273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145841384f6bffff%3A0x669d17627e4a9fe9!2zNTcg2LTYp9ix2Lkg2LTZh9in2KjYjCDYrNiy2YrYsdipINmF2YrYqiDYudmC2KjYqdiMINit2Yog2KfZhNi52KzZiNiy2KnYjCDZhdit2KfZgdi42Kkg2KfZhNis2YrYstipIDM3NTI1MDI!5e0!3m2!1sar!2seg!4v1725038921333!5m2!1sar!2seg" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====> BACKGROUND IMAGE SECTION <====-->
+<section class="background-image-section py-5">
+    <!-- Content or message can be added here -->
+</section>
+
+
+    <!-- ====> FOOTER <====-->
+    <footer class="bg-black text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0" data-translate="footer_text">&copy; 2024 TAG Group. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white me-3" data-translate="privacy_policy">Privacy Policy</a>
+                    <a href="#" class="text-white" data-translate="terms_of_service">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- ====> JS FILES <====-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./home.js"></script>
+    <script src="./translations.js"></script>
+
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9dy7U8z0e2c6q8N6F8U8Q3sFJEO7pkF1GGMKj3H5w+jocwI5YI5" crossorigin="anonymous"></script> -->
+
+
+</body>
+
+</html>
+
+
+
